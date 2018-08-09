@@ -1,5 +1,5 @@
 $(function() {
-    $(".devour").on("click", function(event) {
+    $("#devour").on("submit", function(event) {
         var id = $(this).data("id");
 
         var newlyDevoured = {

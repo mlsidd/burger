@@ -3,8 +3,8 @@ var express = require("express");
 // import bodyparser package
 var bodyParser = require("body-parser");
 
-// set up port for use when deployed by heroku
-var PORT = process.env.PORT;
+// set up port
+var PORT = process.env.PORT || 8080;
 
 // start instance of express function
 var app = express();

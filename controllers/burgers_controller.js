@@ -20,6 +20,7 @@ router.get("/", function(req, res) {
     });
 }); // end of get
 
+// Route to add new burger to db
 router.post("/api/burgers", function(req, res) {
     burger.create([
         "burger", "devoured"
@@ -31,6 +32,16 @@ router.post("/api/burgers", function(req, res) {
     });
 }); // end of post
 
+// Route to update burger when click devoured
+router.put("/api/burgers/:id", function(req, res) {
+    burger.updateOne({
+        devoured: req.body.devoured
+    }, id, function(result) {
+        if(result.changedRows == 0) {
+            
+        }
+    })
+})
 
 
 
