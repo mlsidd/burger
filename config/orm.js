@@ -7,12 +7,11 @@ var connection = require("../config/connection.js");
    in your database. */
 var orm = {
     selectAll: function(col1, col2, table, callback) {
-        var queryString = "SELECT " + col1 + ", " + col2 + " FROM " + table + ";";
-        console.log(queryString);
+        var queryString = `SELECT ${col1}, ${col2} FROM ${table};`
         
         connection.query(queryString, function(err, result) {
             if (err) {
-                throw err;
+                console.error(err);
             }
             callback(result);
         });
