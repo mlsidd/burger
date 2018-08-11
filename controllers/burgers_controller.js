@@ -21,7 +21,7 @@ router.get("/", function(req, res) {
 }); // end of get
 
 // Route to add new burger to db
-router.post("/api/burgers", function(req, res) {
+router.post("/api", function(req, res) {
     burger.create([
         "burger", "devoured"
     ], [
