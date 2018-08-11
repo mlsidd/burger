@@ -10,7 +10,7 @@ var burger = require("../models/burger.js");
 // Set up all routes
 
 // Route to display all burgers in db
-router.get("/api", function(req, res) {
+router.get("/", function(req, res) {
     burger.selectAll(function(data) {
         var burgObj = {
             burgers: data
