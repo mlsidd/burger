@@ -5,13 +5,13 @@ var orm = require("../config/orm.js");
 var burger = {
     // grab all burgers from db
     selectAll: function(callback) {
-        orm.selectAll("id", "burger", "burgers", function(res) {
+        orm.selectAll("id", "burger_name", "burgers", function(res) {
             callback(res);
         });
     },
     // add a burger to db
     insertOne: function(value, callback) {
-        orm.insertOne("burgers", "burger", value, function(res) {
+        orm.insertOne("burgers", "burger_name", value, function(res) {
             callback(res);
         });
     },
