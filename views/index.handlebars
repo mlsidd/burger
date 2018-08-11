@@ -5,7 +5,7 @@
 
     <ul>
         <li>
-            {{#each burgers}} {{this.id}}. {{this.burger}}
+            {{#each burgers}} {{this.id}}. {{this.burger_name}}
             <button data-id="{{this.id}}" id="devour">Devour</button>
             {{/each}}
         </li>
@@ -14,7 +14,7 @@
     <h2>Too Late...Devoured!</h2>
 
     <ul>
-        {{#each burgers}} {{#if this.devoured}} {{this.id}}. {{this.burger}} {{/if}} {{/each}}
+        {{#each burgers}} {{#if this.devoured}} {{this.id}}. {{this.burger_name}} {{/if}} {{/each}}
     </ul>
 
     <h2>Add a Burger</h2>
