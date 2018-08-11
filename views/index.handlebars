@@ -1,12 +1,11 @@
 <h1>Burger Time!</h1>
-
+<img src="../../public/assets/img/kisspng-hamburger-cheeseburger-hot-dog-veggie-burger-carto-junk-food-5abf69bdccf5d0.0162294215224938858395.jpg" alt="burger picture" id="burgerPic">
 <h2>Ready to be Devoured...</h2>
 
 <ul>
     <li>
-        {{#each burgers}}
-            {{this.id}}. {{this.burger}}
-            <button data-id="{{this.id}}" id="devour">Devour</button>
+        {{#each burgers}} {{this.id}}. {{this.burger}}
+        <button data-id="{{this.id}}" id="devour">Devour</button>
         {{/each}}
     </li>
 </ul>
@@ -14,11 +13,7 @@
 <h2>Too Late...Devoured!</h2>
 
 <ul>
-    {{#each burgers}}
-        {{#if this.devoured}}
-        {{this.id}}. {{this.burger}}
-        {{/if}}
-    {{/each}}
+    {{#each burgers}} {{#if this.devoured}} {{this.id}}. {{this.burger}} {{/if}} {{/each}}
 </ul>
 
 <h2>Add a Burger</h2>
