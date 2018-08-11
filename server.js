@@ -16,6 +16,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
+// Static directory to be served - sets the public folder to static and express will not manage it
+app.use(express.static("/public"));
+
 // require handlebars
 var exphbs = require("express-handlebars");
 
