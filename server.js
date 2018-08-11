@@ -9,15 +9,12 @@ var PORT = process.env.PORT || 8080;
 // start instance of express function
 var app = express();
 
-// Set public folder to static to help when importing from folder
-app.use(express.static("public"));
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
 // Static directory to be served - sets the public folder to static and express will not manage it
-app.use(express.static("/public"));
+app.use(express.static('public'));
 
 // require handlebars
 var exphbs = require("express-handlebars");
